@@ -1,0 +1,37 @@
+<template>
+  <div class="home container">
+
+    <div class="card">
+      <div class="card-content center-align">
+        <h2 class="teal-text">Welcome</h2>
+
+        <form @submit.prevent="enterChat">
+          <label for="name">Enter your name:</label>
+          <input type="text" name="name" v-model="name">
+          <button class="btn teal">Enter Chat</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'home',
+  
+  data() {
+    return {
+      name:null,
+
+    }
+  },
+
+  methods: {
+    enterChat() {
+      console.log(this.name);
+    }
+  }
+}
+</script>
