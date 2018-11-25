@@ -1,15 +1,13 @@
 <template>
-  <anim-view class="chat">
-    <div class="container">
-      <div class="card">
-        <div class="card-content">
-          <h2 class="center teal-text">Chat</h2>
-          <message-board />
-        </div>
+  <anim-view class="chat container">
+    <div class="card">
+      <div class="card-content">
+        <h2 class="center teal-text">Chat</h2>
+        <message-board />
+      </div>
 
-        <div class="card-action">
-          <new-message :name="name" />
-        </div>
+      <div class="card-action">
+        <new-message :name="name" />
       </div>
     </div>
   </anim-view>
@@ -45,7 +43,8 @@ export default {
 
 <style lang="scss">
   .chat {
-    
+    position: absolute;
+    top:0px; bottom:0px;
   }
 </style>
 

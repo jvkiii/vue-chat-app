@@ -1,6 +1,5 @@
 <template>
-  <anim-view class="home">
-    <div class="container">
+  <anim-view class="home container">
     <div class="card">
       <div class="card-content center-align">
         <h2 class="teal-text">Welcome</h2>
@@ -12,7 +11,6 @@
           <button class="btn teal">Enter Chat</button>
         </form>
       </div>
-    </div>
     </div>
   </anim-view>
 </template>
@@ -54,6 +52,14 @@ export default {
 <style lang="scss">
   .home {
     button { margin: 30px auto; }
+
+    form {
+      position:absolute;
+      top:50%;
+      transform:translateY(-40%);
+      width:calc(100% - 50px);
+      padding:10px 0;
+    }
   }
 </style>
 

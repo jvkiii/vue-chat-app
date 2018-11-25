@@ -1,8 +1,15 @@
 <template>
   <div class="new-message">
     <form @submit.prevent="addMessage">
-      <label for="new-message">New Message (enter to add):</label>
-      <input ref="messageInput" type="text" name="new-message" v-model="newMessage">
+      <label for="message-input">New Message:</label>
+
+      <div class="rel">
+        <input ref="messageInput" type="text" name="message-input" class="message-input" v-model="newMessage" />
+        <button class="btn gray" type="submit">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+      
       <p class="red-text" v-if="feedback">{{feedback}}</p>
     </form>
   </div>
@@ -57,7 +64,17 @@ export default {
 
 <style lang="scss">
   .new-message {
-    text-align:left;
+
+    .message-input {
+      max-width:calc(100% - 50px);
+    }
+
+    button {
+      position:absolute;
+      bottom:8px; right:0;
+      max-width:44px;
+      padding:0 10px;
+    }
   }
 </style>
 

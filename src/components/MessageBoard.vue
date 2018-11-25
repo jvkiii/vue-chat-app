@@ -64,16 +64,19 @@ export default {
 <style lang="scss">
   .message-board {
     text-align:left;
-    max-height:300px;
+    height:calc(100% - 165px);
+    min-height:70px;
     overflow:auto;
     -webkit-overflow-scrolling: touch; 
 
-    li { margin-bottom:8px; }
+    li { margin-bottom:10px; }
     span { font-size: 1.4em; }
     .name { padding-right:5px; }
+    .message { line-height:1.2; }
     .time {
       display:block;
       font-size:0.8em;
+      margin-top:4px;
     }
   }
 </style>
