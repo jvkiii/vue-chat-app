@@ -1,5 +1,5 @@
 <template>
-  <ul ref="messageBoard" class="message-board">
+  <ul ref="messageBoard" class="message-board scroll">
     <li v-for="message in messages" :key="message.id">
       <span class="name teal-text">{{message.name}}</span>
       <span class="message grey-text text-darken-3">{{message.content}}</span>
@@ -66,8 +66,8 @@ export default {
     text-align:left;
     height:calc(100% - 165px);
     min-height:70px;
-    overflow:auto;
-    -webkit-overflow-scrolling: touch; 
+    //overflow:auto;
+    //-webkit-overflow-scrolling: touch; 
 
     li { margin-bottom:10px; }
     span { font-size: 1.4em; }

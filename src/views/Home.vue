@@ -34,12 +34,13 @@ export default {
   methods: {
     enterChat() {
       if (this.name) {
-        this.$router.push({ name:'chat', params:{ name:this.name } })
+        const name = this.name.charAt(0).toUpperCase() + this.name.slice(1); //initial Uppercase
+        this.$router.push({ name:'chat', params:{ name } })
+        console.log(name);
       }
       else {
         this.feedback = 'You must enter a name to join'
       }
-      console.log(this.name);
     }
   },
 

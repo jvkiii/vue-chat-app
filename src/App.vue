@@ -7,6 +7,7 @@
 
 <style lang="scss">
 @import '~styles/materialize';
+@import '~styles/scroll';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

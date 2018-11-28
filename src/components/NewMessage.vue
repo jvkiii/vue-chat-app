@@ -2,6 +2,7 @@
   <div class="new-message">
     <form @submit.prevent="addMessage">
       <label for="message-input">New Message:</label>
+      <span class="feedback" v-if="feedback">{{feedback}}</span>
 
       <div class="rel">
         <input ref="messageInput" type="text" name="message-input" class="message-input" v-model="newMessage" />
@@ -9,8 +10,6 @@
           <i class="material-icons">add</i>
         </button>
       </div>
-      
-      <p class="red-text" v-if="feedback">{{feedback}}</p>
     </form>
   </div>
 </template>
@@ -67,6 +66,12 @@ export default {
 
     .message-input {
       max-width:calc(100% - 50px);
+    }
+    
+    .feedback { 
+      margin-left:10px; 
+      font-size:0.8rem;
+      color:red;
     }
 
     button {
